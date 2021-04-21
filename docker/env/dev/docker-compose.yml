@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  bot:
+    build:
+      context: ../../../
+      dockerfile: docker/src/backend/Dockerfile
+    command: python main.py
+    volumes:
+      - ../:/apps/crab
+    env_file:
+     - ./.env
