@@ -3,7 +3,7 @@ import json
 from config import service_key
 
 
-def get_data(user_id, count=100000):
+def get_data(user_id, count=10000):
     """makes list of friend's ids from one user. Fields param return dict objects when enabled (max 5000 obj)"""
     api = requests.get(r"https://api.vk.com/method/friends.get",
                        params={
